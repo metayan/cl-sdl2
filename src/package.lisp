@@ -63,6 +63,7 @@
    #:set-window-fullscreen
    #:set-window-size
    #:set-window-position
+   #:set-window-opacity
    #:get-window-title
    #:get-window-size
    #:get-window-aspect-ratio
@@ -71,6 +72,7 @@
    #:get-window-flags
    #:get-window-pixel-format
    #:get-window-id
+   #:get-window-opacity
    #:enable-screensaver
    #:disable-screensaver
    #:screensaver-enabled-p

@@ -171,6 +171,16 @@ Specifying `:windowed` or `:desktop` is \"windowed\" fullscreen, using
 (defun get-window-id (win)
   (sdl-get-window-id win))
 
+(defun set-window-opacity (win opacity)
+  "Set opacity between 0.0 and 1.0"
+  (sdl-set-window-opacity win opacity)
+  (values))
+
+(defun get-window-opacity (win)
+  (with-foreign-objects ((out-opacity :float))
+    (sdl-get-window-opacity win out-opacity)
+    (mem-ref out-opacity :float)))
+
 (defun enable-screensaver ()
   (sdl-enable-screen-saver))
 
